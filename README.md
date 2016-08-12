@@ -46,7 +46,7 @@ Include a loop through the integration objects, if applicable:
 ```
 {% for tweet in data.tweets %}
 <a href="{{ tweet.permalink }}" target="_blank">
-{{ tweet.text }}
+  {{ tweet.text }}
 </a>
 {% endfor %}
 ```
@@ -54,11 +54,13 @@ Include a loop through the integration objects, if applicable:
 Then, extend options examples if applicable:
 
 ```
-tweet.text # text content of tweet
-tweet.user # twitter handle of user who tweeted tweet
-tweet.permalink # link to the tweet
-tweet.date # date of tweet
-tweet.time # time of tweet
+Available Options:
+  tweet.text # text content of tweet
+  tweet.user # twitter handle of user who tweeted tweet
+    tweet.user.avatar # url to user profile photo
+  tweet.permalink # link to the tweet
+  tweet.date # date of tweet
+  tweet.time # time of tweet
 
 ```
 
@@ -67,19 +69,19 @@ Show more customized example, if applicable.
 ```
 {% if data.tweets > 0 %}
 <div id="tweetScroller">
-{% for tweet in data.tweets %}
-<div class="tweet_holder">
-<div class="avatar pull-left">
-<a href="https://twitter.com/{{ tweet.user }}" target="_blank">
-<img src="{{ tweet.user.avatar }}">
-</div>
-<div class="content">
-<a href="{% tweet.permalink %}" target="_blank">
-{% tweet.text %}
-</a>
-</div>
-</div>
-{% endfor %}
+  {% for tweet in data.tweets %}
+  <div class="tweet_holder">
+    <div class="avatar pull-left">
+      <a href="https://twitter.com/{{ tweet.user }}" target="_blank">
+        <img src="{{ tweet.user.avatar }}">
+    </div>
+    <div class="content">
+      <a href="{% tweet.permalink %}" target="_blank">
+        {% tweet.text %}
+      </a>
+    </div>
+  </div>
+  {% endfor %}
 </div>
 {% endif %}
 
