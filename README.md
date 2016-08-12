@@ -83,3 +83,9 @@ Another example
 ```
 
 
+###Notes
+
+- could/should enforce sass dir and encourage all assets to be contained into their own @import
+- all js affiliated with a file should be in its own file.
+
+
