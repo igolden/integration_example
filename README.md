@@ -44,4 +44,6 @@ TODO
 
 * Add a single Gulpfile that makes bundling assets consistent and repeatable.
 
+* Create an Integration "installation guide" discussing tat process.
+
 
