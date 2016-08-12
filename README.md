@@ -43,28 +43,28 @@ Example Instructions
 
 Include a loop through the integration objects, if applicable:
 
-`
+```
 {% for tweet in data.tweets %}
 <a href="{{ tweet.permalink }}" target="_blank">
 {{ tweet.text }}
 </a>
 {% endfor %}
-`
+```
 
 Then, extend options examples if applicable:
 
-`
+```
 tweet.text # text content of tweet
 tweet.user # twitter handle of user who tweeted tweet
 tweet.permalink # link to the tweet
 tweet.date # date of tweet
 tweet.time # time of tweet
 
-`
+```
 
 Show more customized example, if applicable.
 
-`
+```
 {% if data.tweets > 0 %}
 <div id="tweetScroller">
 {% for tweet in data.tweets %}
@@ -83,7 +83,7 @@ Show more customized example, if applicable.
 </div>
 {% endif %}
 
-`
+```
 
 
 TODO
