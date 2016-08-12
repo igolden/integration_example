@@ -99,4 +99,5 @@ TODO
 
 * Create an Integration "installation guide" discussing tat process.
 
+* Create a "building on bowtie" doc that gives idealogies and thought process to interns
 
