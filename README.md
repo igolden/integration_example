@@ -83,10 +83,3 @@ Another example
 ```
 
 
-
-* Add a single Gulpfile that makes bundling assets consistent and repeatable.
-
-* Create an Integration "installation guide" discussing tat process.
-
-* Create a "building on bowtie" doc that gives idealogies and thought process to interns
-
