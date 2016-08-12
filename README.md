@@ -45,55 +45,44 @@ Your bundled assets need to follow a few specific guidelines.
 Example Instructions
 ---
 
-Include a loop through the integration objects, if applicable:
+
+Basic Implementation
 
 ```
-{% for tweet in data.tweets %}
-<a href="{{ tweet.permalink }}" target="_blank">
-  {{ tweet.text }}
-</a>
+{% for tweet in site.data.tweets %}
+  {{ twitter.option }}
 {% endfor %}
 ```
 
-Then, extend options examples if applicable:
+Options:
 
 ```
 Available Options:
   tweet.text # text content of tweet
   tweet.user # twitter handle of user who tweeted tweet
-    tweet.user.avatar # url to user profile photo
-  tweet.permalink # link to the tweet
-  tweet.date # date of tweet
-  tweet.time # time of tweet
+  tweet.user.avatar # url to user profile photo
+  tweet.urls.url # link to the tweet
+  tweet.created_at # time/date of tweet
 
 ```
 
-Show more customized example, if applicable.
+Another example
 
 ```
-{% if data.tweets > 0 %}
-  <div id="tweetScroller">
-    {% for tweet in data.tweets %}
-    <div class="tweet_holder">
-      <div class="avatar pull-left">
-        <a href="https://twitter.com/{{ tweet.user }}" target="_blank">
-          <img src="{{ tweet.user.avatar }}">
-      </div>
-      <div class="content">
-        <a href="{{ tweet.permalink }}" target="_blank">
-          {{ tweet.text }}
-        </a>
-      </div>
-    </div>
+  <ul class="tweet-list">
+    {% for tweet in site.data.tweets %}
+      <li>
+        <span class="post-meta">{{ tweet.created_at | date: "%b %-d, %Y" }}</span>
+        <h4>
+          <a class="tweet-link" href="{{ tweet.urls.url | prepend: site.baseurl }}">{{ tweet.text }}</a>
+        </h4>
+      </li>
     {% endfor %}
-  </div>
-{% endif %}
+  </ul>
 
 ```
 
 
-TODO
----
 
 * Add a single Gulpfile that makes bundling assets consistent and repeatable.
 
