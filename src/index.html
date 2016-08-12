@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <h1 class="page-heading">Posts</h1>
+
+  <ul class="post-list">
+    {% for tweet in site.data.tweets %}
+      <li>
+        <div class="well">
+        <span class="post-meta">{{ tweet.created_at | date: "%b %-d, %Y" }}</span>
+
+        <h4>
+          <a class="tweet-link" href="{{ tweet.urls.url | prepend: site.baseurl }}">{{ tweet.text }}</a>
+        </h4>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>
