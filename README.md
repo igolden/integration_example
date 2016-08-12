@@ -13,6 +13,10 @@ Make a working example in the src/ directory. Users will clone this entire repo 
 
 Extract the integration assets, bundle them for distribution, and move them into your dist/ folder. Any configuration (api keys, etc) need to be extract from the minified bubundle.
 
+### Step 3: Document your integration in the README.md 
+
+After your demo is complete and your assets are bundled, take some time to create a meaningful readme. It will help users get up and running with your integration. Note: We will not accept integrations without a solid readme.
+
 ---
 
 More Details
