@@ -20,3 +20,28 @@ More Details
 
 As we build our first 10 integrations, we want to follow a specific, repeatable guidelines. That being said, we also want to be descriptive in our git commits, code comments, and overall approach to solving problems. This will allow other bowtie users to extend you integrations and contribute online.
 
+
+### Your src/ directory
+
+Your src/ directory is your demo directory. It's important that your realize most users will run this jekyll build before integrating your code.
+
+* Write a README.md for this file
+
+
+### Your dist/ directory
+
+Your bundled assets need to follow a few specific guidelines.
+
+* All assets must be minified. These are blind assets anyone can copy into their site without needing to customize.
+
+* Follow this naming structure:
+  * integration_name.bundle.min.js && integration_name.bundle.min.css
+
+
+
+TODO
+---
+
+* Add a single Gulpfile that makes bundling assets consistent and repeatable.
+
+
