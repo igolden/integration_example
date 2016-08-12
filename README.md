@@ -68,21 +68,21 @@ Show more customized example, if applicable.
 
 ```
 {% if data.tweets > 0 %}
-<div id="tweetScroller">
-  {% for tweet in data.tweets %}
-  <div class="tweet_holder">
-    <div class="avatar pull-left">
-      <a href="https://twitter.com/{{ tweet.user }}" target="_blank">
-        <img src="{{ tweet.user.avatar }}">
+  <div id="tweetScroller">
+    {% for tweet in data.tweets %}
+    <div class="tweet_holder">
+      <div class="avatar pull-left">
+        <a href="https://twitter.com/{{ tweet.user }}" target="_blank">
+          <img src="{{ tweet.user.avatar }}">
+      </div>
+      <div class="content">
+        <a href="{{ tweet.permalink }}" target="_blank">
+          {{ tweet.text }}
+        </a>
+      </div>
     </div>
-    <div class="content">
-      <a href="{% tweet.permalink %}" target="_blank">
-        {% tweet.text %}
-      </a>
-    </div>
+    {% endfor %}
   </div>
-  {% endfor %}
-</div>
 {% endif %}
 
 ```
