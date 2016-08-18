@@ -82,6 +82,8 @@ Another example
 
 ```
 
+Also - *be sure to link to your demo website*.
+
 
 ###Notes
 
